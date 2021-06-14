@@ -29,64 +29,24 @@
             font-family: "Helvetica", "Arial", "微軟雅黑體", "sans-serif";
             background-color: #141b16;
             scroll-behavior: smooth;
-            
-
-        }
-
-        .fp-slidesNav {
-            display: flex;
-            justify-content: center;
-
-        }
-
-        .section {
-            /* padding: 20px; */
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-
         }
 
 
         p {
-            color: rgb(157, 161, 158);
-            font-size: 16px;
+            color: rgb(199, 206, 200);
+            font-size: 18px;
             line-height: 40px;
             letter-spacing: 3px;
         }
 
-        .title {
-            line-height: 40px;
-            letter-spacing: 5px;
-        }
 
-        .card {
-            opacity: 0.6;
-        }
-
-        .card:hover {
-            opacity: 1;
-        }
-
-        .attraction-card {
-            opacity: 1;
-        }
-
-        .btn:hover {
-            width: 120px;
-        }
-
-        .btn:active {
-            font-weight: bolder;
-
-        }
+        /* banner animation*/
 
         .banner {
             position: relative;
             width: 100%;
             height: 100vh;
-            /* background-color: linear-gradient(#111425,#3751e0); */
+
         }
 
         .banner i {
@@ -114,27 +74,6 @@
             }
         }
 
-
-        .moon {
-            position: absolute;
-            top: 100px;
-            left: 300px;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: rgb(255, 255, 255);
-        }
-
-        .moon::after {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: 25px;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-color: #9bd4ab;
-        }
 
         .forest {
             position: absolute;
@@ -213,50 +152,26 @@
 
         }
 
-        .orientation {
-            margin: auto;
-            position: relative;
+        /* swiper-surroundings */
+        .swiper-container01 {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
 
+        .swiper-container01 .swiper-slide {
+            background-position: center;
+            background-size: cover;
             width: 300px;
             height: 300px;
-            transform-style: preserve-3d;
-            animation: surround 60s linear infinite;
         }
 
-        @keyframes surround {
-            0% {
-                transform: perspective(1000px)rotateY(0deg);
-            }
-
-            100% {
-                transform: perspective(1000px)rotateY(360deg);
-            }
-        }
-
-        .orientation span {
-            position: absolute;
-            top: 20%;
-            left: 20%;
+        .swiper-container01 .swiper-slide img {
+            display: block;
             width: 100%;
-            height: 100%;
-            transform-origin: center;
-            transform-style: preserve-3d;
-            transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-            /* -webkit-orientation-reflect:below 0px linear-gradient(transparent,transparent,#0004); */
         }
 
-        .orientation span img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* background-image: url(./img/HANA.html.png); */
-
-
-        }
-
+        /* swiper-mebu */
         .swiper-container {
             width: 100%;
             height: 40%;
@@ -298,36 +213,54 @@
 <body>
 
     <!-- nav -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark font-weight-bold">
-        <a class="navbar-brand" href="#area1"
-            style="background-image: url(./img/LOGO.png);background-size: cover;background-position: center; border-radius: 50%;width: 80px;height: 80px;">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand" href="#area1">
+            <img src="./img/LOGO.png" width="70" height="70" class="d-inline-block align-center rounded-circle mr-3">
+
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link mr-3 btn btn-dark  rounded-pill" href="#area2">關於Hana<span
-                        class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link mr-3 btn btn-dark  rounded-pill" href="#area3">店內環境</a>
-                <a class="nav-item nav-link mr-3 btn btn-dark  rounded-pill" href="#area4">美味菜單</a>
-                <a class="nav-item nav-link mr-3 btn btn-dark  rounded-pill" href="#area5">最新消息</a>
-                <a class="nav-item nav-link mr-3 btn btn-dark  rounded-pill" href="#area6">周邊景點</a>
-                <a class="nav-item nav-link mr-3 btn btn-dark  rounded-pill" href="#area7">聯絡我們</a>
+            <div class="navbar-nav ml-auto ">
+                <a class="nav-item nav-link mr-3 d-flex" href="#area2">
+                    <img src="./img/bread.png" width="30" height="30" class="mr-2">
+
+                    <h5 style="color:#dcdcdc;font-weight: bolder;">關於我們</h5>
+                </a>
+                <a class="nav-item nav-link mr-3  d-flex" href="#area3">
+                    <img src="./img/vegetable.png" width="30" height="30" class="mr-2">
+                    <h5 style="color:#dcdcdc;font-weight: bolder;">店內環境</h5>
+                </a>
+                <a class="nav-item nav-link mr-3  d-flex" href="#area4">
+                    <img src="./img/pizza-piece.png" width="30" height="30" class="mr-2">
+                    <h5 style="color:#dcdcdc;font-weight: bolder;">
+                        美味菜單</h5>
+                </a>
+                <a class="nav-item nav-link mr-3 d-flex" href="#area5">
+                    <img src="./img/cocktail.png" width="30" height="30" class="mr-2">
+                    <h5 style="color:#dcdcdc;font-weight: bolder;">最新消息</h5>
+                </a>
+                <a class="nav-item nav-link mr-3 d-flex " href="#area6">
+                    <img src="./img/salad.png" width="30" height="30" class="mr-2">
+                    <h5 style="color:#dcdcdc;font-weight: bolder;">周邊景點</h5>
+                </a>
+                <a class="nav-item nav-link mr-3   d-flex" href="#area7">
+                    <img src="./img/bread.png" width="30" height="30" class="mr-2">
+                    <h5 style="color:#dcdcdc;font-weight: bolder;">聯絡我們</h5>
+                </a>
             </div>
         </div>
     </nav>
 
-    <div id="fullpage" style="width:100vw;height:auto;">
-        <div class="section section1" id="area1" style=" overflow:hidden; ">
 
-            <!-- <div class="slide"><img src="./img/15653 [轉換]-02.svg" alt="" > </div>
-            <div class="slide"></div>
-            <div class="slide"> </div> -->
+
+    <div id="fullpage">
+        <!-- banner -->
+        <div class="section" id="area1" style=" overflow:hidden; ">
             <div class="banner"
-                style="background-image: url(./img/0021033864207779_b.jpg);background-position: center;background-size:cover;">
-                <!-- <div class="moon"></div> -->
+                style="background-image: url(./img/banner.jpg);background-position:center;background-size:cover;">
                 <img src="./img/forest.png" class="forest">
                 <img src="./img/cloud1.png" class="cloud1">
                 <img src="./img/cloud2.png" class="cloud2">
@@ -335,116 +268,118 @@
                 <img src="./img/cloud1.png" class="cloud4">
                 <img src="./img/cloud2.png" class="cloud5">
                 <img src="./img/cloud3.png" class="cloud6">
-                <h1 class="text-center align-middle text-white" style="padding: 20%;z-index: 9999;">Welcome to Hana</h1>
+                <h1 class="text-center text-white" style="padding: 20%">Welcome to Hana</h1>
             </div>
-
         </div>
 
-        <div class="section section2  mt-5 " id="area2" style="position: relative;">
-            <!-- 關於Hana -->
-            <div class="container-all h-100">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- <img src="./img/H.png" class="p-5">/ -->
-                        <h4 class="font-weight-bold text-center  text-white  mt-5 mb-5 "> 關於HANA </h4>
+        <!-- 背景故事 -->
+        <div class="section  mt-5 p-5" id="area2">
+            <div class="container-all">
+                <div class="row mb-5 pt-3">
+                    <div class="col-12 col-md-6 mt-4 ">
+                        <img src="./img/story-img.jpg" alt="" class="rounded w-100">
                     </div>
-                </div>
-
-                <!-- 背景故事 -->
-                <div class="row story mb-5 ">
-                    <div class="col-5 p-0">
-                        <div class="story-img">
-                            <img src="./img/story-img.jpg" alt="" class="rounded w-100">
-                        </div>
-                    </div>
-
-                    <div class="story-text col-6 p-4 mx-auto "
-                        style="background-image: url(./img/bb.png);background-position: center;background-size:cover;">
-                        <div class=" text-center">
+                    <div class=" col-12 col-md-5 mt-3 ml-5 mx-auto "
+                        style="background-image: url(./img/background-blue.png);background-position: center;background-size:cover;">
+                        <div class="text-center">
                             <img src="./img/story-title.png" style="width: 300px;height: 100px;">
-                            <!-- <h6 class="text-light font-weight-bold w-50 border-top border-bottom border-white mx-auto mb-3">
-                                背景故事</h6> -->
-
-                            <h5 class=" title text-light mt-3 mb-3"> HANA 廚房 — 南非女孩為愛走天涯<br>嫁入阿里山與鄒族少年共築而成的浪漫山林餐廳</h5>
+                            <h5 class="  text-light mt-3 mb-3" style=" line-height: 40px;
+                            letter-spacing: 5px;"> HANA 廚房 — 南非女孩為愛走天涯<br>嫁入阿里山與鄒族少年共築而成的浪漫山林餐廳</h5>
                             <hr>
-                            <div class="content">
-                                <p>隱身在阿里山來吉部落裡的Hana廚房，不僅有如仙境般的森林造景和絕美風景，背後更是有一段超級浪漫的愛情故事。老闆娘是來自非洲西南部納米比亞共和國（Republic of
-                                    Namibia）的南非女孩，五年前因來台灣打工度假認識了阿里山鄒族勇士，兩人一見鍾情就此相戀成為鄒族媳婦，並用愛共築了這間深山裡的麵包坊和餐廳。</p>
-                            </div>
+                            <p>隱身在阿里山來吉部落裡的Hana廚房，不僅有如仙境般的森林造景和絕美風景，背後更有著一段浪漫愛情故事。老闆娘是來自非洲西南部納米比亞共和國（Republic of
+                                Namibia）的女孩，五年前來台灣打工度假認識了老闆，兩人一見鍾情就此相戀成為鄒族媳婦，並用愛共築了這間深山麵包坊及餐廳。</p>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- 經營理念 -->
+        <div class="section">
+            <div class="container-all">
+                <div class="row pt-3 ">
+                    <div class="col-12 col-md-6 p-5 mt-5">
+                        <div class="text-center"
+                            style="background-image: url(./img/background-green.png);background-position: center;background-size:cover;">
+                            <img src="./img/concept-title.png" width="120" height="80">
+                            <h5 class=" text-light mt-3 mb-4" style=" line-height: 40px;
+                            letter-spacing: 5px;"> 她愛阿里山，更愛台灣<br>她總說：「台灣真的很美，你們怎麼捨得這樣破壞她？」</h5>
+                            <hr>
+                            <p>HANA創立的初衷，是有感於台灣土地因有機農業、塑膠垃圾受到污染，希望能用愛守護這片山林，同時融合部落與南非佳餚，盡可能採用在地季節性純天然農特產推出部落料理，讓旅人可以邊欣賞阿里山風景區的美好，邊體驗當季最新鮮且具新意的味蕾享受。
+                            </p>
 
-        <div class="section section3">
-            <!-- 經營理念 -->
-            <div class="container-all h-100 ">
-                <div class="row concept  mb-3">
-                    <div class="col-6 p-5 mt-5">
-                        <div class="concept-text text-center"
-                            style="background-image: url(./img/jj.png);background-position: center;background-size:cover;">
-                            <img src="./img/concept-title.png" style="width: 120px;height: 80px;">
-                            <!-- <h6
-                                class=" text-light font-weight-bold w-50 border-top border-bottom border-white mx-auto mb-3">
-                                經營理念</h6> -->
-                            <h5 class=" title text-light mt-3 mb-4"> 她愛阿里山，更愛台灣<br>她總說：「台灣真的很美，你們怎麼捨得這樣破壞她？」</h5>
-                            <div class="content">
-                                <p>老闆娘創立的初衷，是有感於台灣土地因有機農業、塑膠垃圾受到污染，她希望用愛守護這片山林，同時融合部落與南非佳餚，盡可能採用在地季節性的純天然農特產推出部落料理，讓旅人可以邊欣賞阿里山自然風景區的美好，邊體驗當季最新鮮且具新意的味蕾享受。
-                                </p>
-                            </div>
                         </div>
                     </div>
-                    <div class="col-5 p-0">
-                        <div class="concept-img pt-5 ">
-                            <img src="./img/banner01.png" alt="" class="rounded h-100 w-100">
-                        </div>
+                    <div class="col-12 col-md-5 pt-5 mt-3">
+                        <img src="./img/concept.png">
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-8 mx-auto text-center">
+                    <div class="col-8 mx-auto text-center d-flex">
+                        <img src="./img/pizza.png" width="80" height="80" class="mr-3">
                         <p style="color: #f7f1d9;">
-                            因此，「Hana廚房」沒有提供任何塑膠用品，也沒有提供外帶服務和塑膠袋，甚至連面紙都沒有！如果你（妳）也懂他們堅持的，來時記得把餐點吃完，如果擔心吃不完可以帶保鮮盒一起來喔！</p>
+                            因此，Hana沒有提供任何塑膠用品，也沒有提供外帶服務和塑膠袋，甚至連面紙都沒有！如果你（妳）也懂我們堅持的，來時記得把餐點吃完，如果擔心吃不完可以帶保鮮盒一起來喔！
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+
+
 
         <!-- 店內環境 -->
-        <div class="section section4" id="area3"
-            style="background-image: url(./img/orientation.png);background-attachment: fixed;">
-            <div class="container-all h-100">
-                <div class="row">
-                    <div class="col-12">
-                        <h4 class="text-light font-weight-bold text-center text-info mt-5 mb-5 "> 店內環境 </h4>
+        <div class="section" id="area3"
+            style="background-image: url(./img/surroundings07.jpg);background-position: center;background-size: cover;">
+
+            <!-- Swiper -->
+            <div class="swiper-container01 mySwiper01 mb-5">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/surroundings01.jpg" />
+
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/surroundings03.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/surroundings04.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/surroundings05.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/surroundings06.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/surroundings02.jpg" />
+
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/surroundings08.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/surroundings07.jpg" />
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
 
-                <div class="orientation">
-                    <span style="--i:1;"> <img src="./img/環境02.jpg"></span>
-                    <span style="--i:2;"><img src="./img/環境3.jpg"></span>
-                    <span style="--i:3;"><img src="./img/環境04.jpg"></span>
-                    <span style="--i:4;"><img src="./img/環境02.jpg"></span>
-                    <span style="--i:5;"><img src="./img/環境3.jpg"></span>
-                    <span style="--i:6;"><img src="./img/環境04.jpg"></span>
-                    <span style="--i:7;"><img src="./img/環境02.jpg"></span>
-                    <span style="--i:8;"><img src="./img/環境3.jpg"></span>
-
-                </div>
             </div>
+
+            <h5 class="font-weight-bolder text-center" style="color: rgb(24, 52, 143); line-height: 40px;
+            letter-spacing: 3px;background-color: rgb(196, 209, 189);opacity: 0.6;">
+                坐落在這空氣清新的原始身林裡，群山環繞環境優美，一邊聽著蟲鳴鳥叫，一邊品嘗著剛出爐的麵包，<br>
+                香味飄散整個來吉部落，三五好友談笑風生，讓人不禁有種人生不就這點事的淡泊想法~</h5>
         </div>
 
         <!-- 餐點介紹page1 -->
-        <div class="section section5" id="area4">
-
+        <div class="section" id="area4">
             <div class="swiper-container mySwiper mb-5">
                 <div class="swiper-wrapper">
-
                     <!-- 臘肉披薩 -->
-                    <div class="swiper-slide ">
+                    <div class="swiper-slide">
                         <img src="./img/pizza01.jpg" style="position: absolute;">
-                        <div class="meal text-center text-white " style="position:relative;padding-top:40%">
+                        <div class="meal text-center text-white" style="position:relative;top: 40%;">
                             <h2 class="meal-name font-weight-bold">臘肉披薩</h2>
                             <h4 class="meal-price">$500</h4>
                         </div>
@@ -485,11 +420,13 @@
 
                 </div>
                 <div class="swiper-pagination"></div>
-                <!-- <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div> -->
+
+            </div>
+            <div class="d-flex justify-content-center">
+                <img src="./img/menu.png" width="40" height="40" class="mr-3">
+                <h2 class="text-light font-weight-bold  text-center "> 美味菜單 </h2>
             </div>
 
-            <h4 class="text-light font-weight-bold  text-center "> 美味菜單 </h4>
             <div class="swiper-container mySwiper mt-5">
                 <div class="swiper-wrapper">
                     <!-- 烤肉盤 -->
@@ -537,8 +474,6 @@
 
                 </div>
                 <div class="swiper-pagination"></div>
-                <!-- <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div> -->
             </div>
 
 
@@ -546,7 +481,7 @@
         </div>
 
         <!-- 餐點介紹page2 -->
-        <div class="section section6 mt-5  mb-5">
+        <div class="section mt-5 mb-5">
 
             <div class="swiper-container mySwiper mb-5">
                 <div class="swiper-wrapper">
@@ -595,11 +530,14 @@
 
                 </div>
                 <div class="swiper-pagination"></div>
-                <!-- <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div> -->
+
             </div>
 
-            <h4 class="text-light font-weight-bold  text-center "> 美味菜單 </h4>
+            <div class="d-flex justify-content-center">
+                <img src="./img/menu.png" width="40" height="40" class="mr-3">
+                <h2 class="text-light font-weight-bold  text-center "> 美味菜單 </h2>
+            </div>
+
             <div class="swiper-container mySwiper mt-5">
                 <div class="swiper-wrapper">
                     <!-- 	來吉紅茶-->
@@ -647,8 +585,7 @@
 
                 </div>
                 <div class="swiper-pagination"></div>
-                <!-- <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div> -->
+
             </div>
 
 
@@ -657,30 +594,41 @@
 
 
         <!-- 最新消息 -->
-        <div class="section section7" id="area5"
-            style="background-attachment: fixed; background-image: url(./img/HANA.html.png);background-position: center;background-size: cover">
+        <div class="section" id="area5"
+            style="background-attachment: fixed; background-image: url(./img/flower.png);background-position: center;background-size: cover">
             <div class="container-all text-white" style="line-height: 40px;letter-spacing: 3px;">
                 <div class="row">
                     <div class="col-12">
-                        <h4 class=" font-weight-bold  ml-5"> — 最新消息 — </h2>
+                        <h2 class=" font-weight-bold  ml-5" style="color: #fffacd;"> — 最新消息 — </h2>
                     </div>
                 </div>
                 <div class="row  ">
-                    <div class="col-8  mt-5 mx-auto ">
+                    <div class="col-8  mx-auto ">
                         <div class="row mb-3">
                             <div class="col-3">
                                 <h5>2021.06.02</h5>
                             </div>
                             <div class="col-9">
-                                <h5> ● 促銷活動！壽星優惠：當日壽星憑證件享9折優惠。</h5>
+                                <h4 class="font-weight-bolder" style="color:#b22222	"> ● 每月公休！</h4>
+                                <h5 style="color:pink">六月公休日為6/11 ~ 6/15。</h5>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3">
+                                <h5>2021.06.02</h5>
+                            </div>
+                            <div class="col-9 ">
+                                <h4 class="font-weight-bolder" style="color:#b22222"> ● 促銷活動！</h4>
+                                <h5 style="color:pink">壽星優惠：當日壽星憑證件享9折優惠。</h5>
                             </div>
                         </div>
                         <div class="row mb-3 ">
                             <div class="col-3">
                                 <h5>2021.06.02</h5>
                             </div>
-                            <div class="col-9">
-                                <h5> ● 促銷活動！當季優惠：本季優惠───凡點烤肉盤贈來吉紅茶分享壺一壺。</h5>
+                            <div class="col-9 ">
+                                <h4 class="font-weight-bolder" style="color:#b22222"> ● 促銷活動！</h4>
+                                <h5 style="color:pink">當季優惠：本季優惠───凡點烤肉盤贈來吉紅茶分享壺一壺。</h5>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -688,19 +636,12 @@
                                 <h5>2021.06.02</h5>
                             </div>
                             <div class="col-9">
-                                <h5> ● 新推餐點！</h5>
+                                <h4 class="font-weight-bolder" style="color:#b22222	"> ● 新推餐點！</h4>
+                                <h5 style="color:pink">竹筒飯$100：全新推出來自阿里山來吉部落最道地的原住民慶典米食料理，快來享用哦~</h5>
 
-                                <h5>竹筒飯：竹筒飯為原住民慶典米食料理，蒸熟後米飯中帶有淡淡竹香味，吃的時候連同竹壁內膜一起食用， 便可享用到來自阿里山來吉部落最道地的原住民風味。</h5>
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-3">
-                                <h5>2021.06.02</h5>
-                            </div>
-                            <div class="col-9">
-                                <h5> ● 每月公休日！六月公休日為6/11 ~ 6/15。</h5>
-                            </div>
-                        </div>
+
 
                     </div>
                 </div>
@@ -710,30 +651,30 @@
         </div>
 
         <!-- 周邊景點 -->
-        <div class="section section8" id="area6">
+        <div class="section" id="area6">
 
             <div class="container-all">
                 <div class="row">
                     <div class="col-12">
-                        <h4 class=" font-weight-bold text-center text-white  mt-2 mb-5 "> 周邊景點 </h2>
+                        <h2 class=" font-weight-bold text-center mt-2 mb-5 " style="color: #ffffff;"> — 周邊景點 — </h2>
                     </div>
 
                 </div>
                 <div class="row">
                     <div class="col-11  mx-auto">
                         <div class="card-deck">
-                            <div class="card attraction-card text-center  p-2"
-                                style="height: 60vh;background-color: #a0b39c;box-shadow: 20px 10px 10px #252525;">
+                            <div class="card text-center  p-2" height="60vh"
+                                style="background-color: #a0b39c;box-shadow: 15px 10px 10px #383a39;">
                                 <img src="./img/attractions01.jpg" class="card-img-top h-75">
                                 <div class="card-body">
-                                    <h5 class="card-title font-weight-bolder " style="color: 	#444444">阿里山森林遊樂區</h5>
+                                    <h5 class="card-title font-weight-bolder " style="color: #444444">阿里山森林遊樂區</h5>
                                     <hr>
                                     <h6 class="card-text mb-3" style="color: rgb(82, 87, 84);">地址：嘉義縣阿里山鄉2鄰17號</h6>
                                     <h6 class="card-text" style="color: rgb(82, 87, 84);">電話：05-267 9917</h6>
                                 </div>
                             </div>
-                            <div class="card attraction-card text-center  p-2"
-                                style="height: 60vh;background-color: #afc4aa;box-shadow: 20px 10px 10px #252525;">
+                            <div class="card  text-center  p-2" height="60vh"
+                                style="background-color: #a0b39c;box-shadow: 15px 10px 10px #383a39;">
                                 <img src="./img/attractions02.jpg" class="card-img-top h-75">
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bolder " style="color: 	#444444">奮起湖風景區</h5>
@@ -742,8 +683,8 @@
                                     <h6 class="card-text" style="color: rgb(82, 87, 84);"> 電話：05-259-3900</h6>
                                 </div>
                             </div>
-                            <div class="card attraction-card text-center  p-2"
-                                style="height: 60vh;background-color: #afc4aa;box-shadow: 20px 10px 10px #252525;">
+                            <div class="card  text-center  p-2" height="60vh"
+                                style="background-color: #a0b39c;box-shadow: 15px 10px 10px #383a39;">
                                 <img src="./img/attractions03.jpg" class="card-img-top h-75">
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bolder " style="color: 	#444444">空氣圖書館</h5>
@@ -752,8 +693,8 @@
                                     <h6 class="card-text" style="color: rgb(82, 87, 84);">電話：05-257 2366</h6>
                                 </div>
                             </div>
-                            <div class="card attraction-card text-center  p-2"
-                                style="height: 60vh;background-color: #afc4aa;box-shadow: 20px 10px 10px #252525;">
+                            <div class="card text-center  p-2" height="60vh"
+                                style="background-color: #a0b39c;box-shadow: 15px 10px 10px #383a39;">
                                 <img src="./img/attractions04.webp" class="card-img-top h-75">
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bolder " style="color: 	#444444">太平雲梯</h5>
@@ -770,48 +711,65 @@
         </div>
 
         <!-- 聯絡我們 -->
-        <div class="section section9" id="area7">
-            <div class="container-full h-100">
-                <div class="row">
-                    <div class="col-12">
-                        <h4 class="text-white font-weight-bold text-center mt-5 mb-5 "> 聯絡我們 </h4>
+        <div class="section " id="area7"
+            style="background-image: url(./img/flower02.png);background-position: center;background-size: cover;">
+            <div class="container-full">
+                <div class="row ">
+                    <div class="col-12 mx-auto text-center"
+                        style="background-image: url(./img/bb.png);background-position: center;background-size:cover;">
+                        <h2 class="text-center mb-5 font-weight-bolder" style="color:#2f4664 ;">
+                            聯絡資訊
+                        </h2>
+                        <div class="d-flex justify-content-center mb-3"><img src="./img/calendar.png" class="mr-2"
+                                width="40" height="40">
+                            <p class=" font-weight-bolder rounded" style="color:#bdb6be ;"> 公休日：星期一、二 </p>
+                        </div>
+                        <div class="d-flex justify-content-center mb-3"><img src="./img/telephone.png" class="mr-2"
+                                width="40" height="40">
+                            <p class="font-weight-bolder rounded" style="color:#bdb6be ;"> 電話： 0975 117 154</p>
+                        </div>
+                        <div class="d-flex justify-content-center mb-3"><img src="./img/facebook.png" class="mr-2"
+                                width="40" height="40">
+                            <p class="font-weight-bolder rounded" style="color:#bdb6be ;"> 社群：Facebook</p>
+                        </div>
+                        <div class="d-flex justify-content-center mb-3"><img src="./img/clock.png" class="mr-2"
+                                width="40" height="40">
+                            <p class=" font-weight-bolder rounded" style="color:#bdb6be;">營業時間： 星期三~星期日11:00~17:00</p>
+                        </div>
+                        <div class="d-flex justify-content-center mb-3"><img src="./img/address.png" class="mr-2"
+                                width="40" height="40">
+                            <p class=" font-weight-bolder rounded" style="color:#bdb6be ;"> 地址： 605嘉義縣阿里山鄉第二鄰部落市集二樓</p>
+                        </div>
+                        <div class="d-flex justify-content-center mb-3"><img src="./img/exclamation-mark.png"
+                                class="mr-2" width="40" height="40">
+                            <p class=" font-weight-bolder rounded" style="color:#bdb6be ;">山區僅供付現不提供刷卡服務哦~</p>
+                        </div>
+
+
                     </div>
+
                 </div>
-                <div class="row " style="height: 70vh;">
-                    <div class="col-10 mx-auto">
+
+            </div>
+        </div>
+
+        <div class="section"
+            style="background-image: url(./img/orientation.png);background-position: center;background-size: cover;">
+            <div class="container-full ">
+                <!-- 地圖 -->
+                <div class="row ">
+                    <div class="col-5 mx-auto">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25006.378755011887!2d27.135677000000005!3d38.423048!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd862a762cacd%3A0x628cbba1a59ce8fe!2zxLB6bWlyLCBUdXJrZXk!5e0!3m2!1sen!2sus!4v1618190388476!5m2!1sen!2sus"
                             style="filter:grayscale(100%)" class="border-0 w-100 h-100 rounded" allowfullscreen=""
                             loading="lazy">
                         </iframe>
                     </div>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="section section10 "
-            style="position:relative;background-image: url(./img/p.png);background-position: center;background-size: cover;">
-            <div class="container-full">
-                <div class="row ">
-                    <div class="col-6 mx-auto text-center"
-                        style="background-image: url(./img/bb.png);background-position: center;background-size:cover;">
-                        <h4 class="text-center mb-5 font-weight-bolder" style="color:#365073 ;">
-                            < Hana廚房>
-                        </h4>
-                        <p class=" font-weight-bolder rounded" style="color:#bdb6be ;">○ 公休日：星期一、二 </p>
-                        <p class="font-weight-bolder rounded" style="color:#bdb6be ;">○ 電話： 0975 117 154</p>
-                        <p class="font-weight-bolder rounded" style="color:#bdb6be ;">○ 社群：Facebook</p>
-                        <p class=" font-weight-bolder rounded" style="color:#bdb6be;">○ 營業時間： 星期三~星期日11:00~17:00</p>
-                        <p class=" font-weight-bolder rounded" style="color:#bdb6be ;">○ 地址： 605嘉義縣阿里山鄉第二鄰部落市集二樓</p>
-                        <p class=" font-weight-bolder rounded" style="color:#bdb6be ;">○ 山區僅供付現不提供刷卡服務哦~</p>
-                    </div>
                     <!-- 表單 -->
                     <div class="col-4 mx-auto pr-5">
-                        <h4 class="mb-3 text-center font-weight-bolder" style="color:#365073 ;">
+                        <h2 class="mb-3 text-center font-weight-bolder" style="color:#2f4664 ;">
                             聯絡我們
-                        </h4>
+                        </h2>
                         <form>
                             <div class="form-group ">
                                 <label for="formGroupExampleInput" style="color:#bdb6be">姓名</label>
@@ -825,20 +783,21 @@
                             <div class="form-group ">
                                 <label for="formGroupExampleInput2" style="color:#bdb6be">信箱</label>
                                 <input type="email" class="form-control" id="formGroupExampleInput2"
-                                    placeholder="123@gmail.com">
+                                    placeholder="abc123@gmail.com">
                             </div>
                             <div class="form-group ">
                                 <label for="formGroupExampleInput2" style="color:#bdb6be">內容</label>
                                 <input type="text" class="form-control" id="formGroupExampleInput2"
-                                    placeholder="您想說甚麼？">
+                                    placeholder="輸入你想跟我們說的話！">
                             </div>
                             <div class="form-group text-info">
                                 <label for="formGroupExampleInput2"></label>
-                                <input type="submit" class="form-control" id="formGroupExampleInput2">
+                                <input type="submit" class="btn btn-dark form-control" id="formGroupExampleInput2">
                             </div>
                         </form>
                     </div>
                 </div>
+
                 <div class="row ">
                     <div class="col-12 text-white mx-auto "
                         style="position: absolute;bottom: 0;background-color: #2F4F4F;">
@@ -847,11 +806,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
 
         <!-- bootstrapcdn -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -866,6 +820,32 @@
 
         <!-- swipercdn -->
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper01 = new Swiper(".mySwiper01", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                autoplay: true,
+                autoplay: {
+                    delay: 5000,
+                },
+            });
+        </script>
+
         <!-- Initialize Swiper -->
         <script>
             var swiper = new Swiper(".mySwiper", {
@@ -883,59 +863,27 @@
             });
         </script>
 
-
         <!-- fullpage -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"
             integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ=="
             crossorigin="anonymous"></script>
 
         <!-- Initialize fullpage -->
-        <!-- <script src="js/jquery.slimscroll.min.js"></script> -->
         <script>
             new fullpage('#fullpage', {
                 //options here
                 autoScrolling: true,
                 scrollHorizontally: true,
                 navigation: true,
-                sectionsColor: ['#141b16', '#141b16', '#141b16', '#141b16', '#141b16', '#141b16', '#516959', '#516959', '#516959', '#516959', '#516959'],
+                sectionsColor: ['#141b16', '#141b16', '#4b6258', '#141b16', '#141b16', '#141b16', '#516959', '#516959', '#516959', '#516959'],
                 slidesNavigation: true,
                 slidesNavPosition: 'bottom',
                 scrollBar: true,
                 scrollOverflow: false,
                 scrollingSpeed: 500,
-                // AllowScrolling:true,up,down,
 
             });
 
-//             new fullpage('#fullpage', {
-// 	anchors: ['area1', 'area2', 'area3', 'area4', 'area5','area6','area7'],
-
-// 	afterSlideLoad: function( section, origin, destination, direction){
-// 		var loadedSlide = this;
-
-// 		//first slide of the second section
-// 		if(section.anchor == 'secondPage' && destination.index == 1){
-// 			alert("First slide loaded");
-// 		}
-
-// 		//second slide of the second section (supposing #secondSlide is the
-// 		//anchor for the second slide)
-// 		if(section.index == 1 && destination.anchor == 'secondSlide'){
-// 			alert("Second slide loaded");
-// 		}
-// 	}
-// });
-
-// <ul id="myMenu">
-// 	<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
-// 	<li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
-// 	<li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
-// 	<li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
-// </ul>
-// new fullpage('#fullpage', {
-// 	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-// 	menu: '#myMenu'
-// });
 
         </script>
         <script>
